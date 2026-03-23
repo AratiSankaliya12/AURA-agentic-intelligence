@@ -18,3 +18,8 @@ workflow.add_edge(START, "greeting")
 workflow.add_edge("greeting", END)
 
 app = workflow.compile()
+
+if __name__ == "__main__":
+    initial_state = {"message": "Hello, Dhamu's Agent!"}
+    result = app(initial_state)
+    print("Final Result:", result)
